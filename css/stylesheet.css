@@ -1,0 +1,130 @@
+body{
+	background:#ADFF2F;
+}
+/*************************************************************************SCREEN1*/
+/*************************************************************************SCREEN1*/
+/*************************************************************************SCREEN1*/
+/*************************************************************************SCREEN1*/
+/*************************************************************************SCREEN1*/
+.screen1{
+	display:inline;
+}
+.icon_select div{
+	margin: 3% 0;
+	text-align:center;
+	
+}
+.icon_select div i{
+	font-size:10em;
+}
+.icon_select div i:hover{
+	opacity:0.6;
+	//color:white;
+	cursor:pointer;
+}
+.next_button{	
+    background-color: red; 
+	cursor: pointer;    
+    border-radius: 10px;
+	text-align:center;
+	padding:1%;
+}
+
+.next_button:hover{
+	opacity:0.6;
+}
+.next_button i{
+	color:white;
+	font-size:10em;
+}
+/*************************************************************************SCREEN2*/
+/*************************************************************************SCREEN2*/
+/*************************************************************************SCREEN2*/
+/*************************************************************************SCREEN2*/
+/*************************************************************************SCREEN2*/
+
+.screen2{
+	display:none;
+}
+
+.play_button{
+	background-color: red; 
+	cursor: pointer;    
+    border-radius: 10px;
+	text-align:center;
+	padding:1%;
+	margin:3% 0%;
+}
+.play_button i {
+	font-size: 10em;
+}
+.play_button:hover{
+	opacity:0.6;
+}
+.play_button .play{display:none;}
+.antwoorden_knoppen div { padding:5%; }
+.antwoorden_knoppen div div{ 
+	 border: 1px solid black;
+	 min-height:150px;
+	 background-size:contain; 
+	 background-repeat:no-repeat;
+	 background-position:center;
+	 cursor:pointer;
+}
+#tracktime{display:none;}
+
+.img_jacht{ background-image:url('../img/jacht.jpg') }
+.img_honger{ background-image:url('../img/honger.png') }
+.img_tijger{ background-image:url('../img/tijger.png') }
+.img_vrouw{ background-image:url('../img/vrouw.jpg') }
+.img_bang{ background-image:url('../img/bang.jpg') }
+.img_beesten{ background-image:url('../img/beesten.jpg') }
+.img_dikke{ background-image:url('../img/dikke.jpg') }
+.img_dood{ background-image:url('../img/dood.jpg') }
+.img_eten{ background-image:url('../img/eten.jpg') }
+.img_halt{ background-image:url('../img/halt.jpg') }
+.img_helpen{ background-image:url('../img/helpen.jpg') }
+.img_heuvel{ background-image:url('../img/heuvel.jpg') }
+.img_kijken{ background-image:url('../img/kijken.jpg') }
+.img_koe{ background-image:url('../img/koe.jpg') }
+.img_konijn{ background-image:url('../img/konijn.jpg') }
+.img_kop{ background-image:url('../img/kop.jpg') }
+.img_maan{ background-image:url('../img/maan.jpg') }
+.img_opkomt{ background-image:url('../img/opkomt.jpg') }
+.img_riep{ background-image:url('../img/riep.jpg') }
+.img_rots{ background-image:url('../img/rots.jpg') }
+.img_skelet{ background-image:url('../img/skelet.jpg') }
+.img_stier{ background-image:url('../img/stier.jpg') }
+.img_tijd{ background-image:url('../img/tijd.jpg') }
+.img_vroeg{ background-image:url('../img/vroeg.jpg') }
+.img_wacht{ background-image:url('../img/wacht.jpg') }
+.img_wereld{ background-image:url('../img/wereld.jpg') }
+.img_zon{ background-image:url('../img/zon.jpg') }
+.img_zorgen{ background-image:url('../img/zorgen.jpg') }
+/*************************************************************************SCREEN3*/
+/*************************************************************************SCREEN3*/
+/*************************************************************************SCREEN3*/
+/*************************************************************************SCREEN3*/
+/*************************************************************************SCREEN3*/
+.screen3{
+	display:none;
+}
+.screen3 .row{
+	margin: 3% 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

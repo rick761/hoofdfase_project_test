@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	
+	
+    <title>Prototype Afas.io</title>
+  </head>
+  <body>
+  
+	<div class="container screen1">
+		<div class="row icon_select">
+			<div class="col-12">
+			<h2>gebruikt u? (kies telefoon/desktop en speaker/koptelefoon):</h2>
+			</div>
+			<div class="col-6">
+			  <i class="fas fa-desktop desktop_icon"></i>
+			</div>
+			<div class="col-6">
+			  <i class="fas fa-mobile-alt phone_icon"></i>
+			</div>
+			<div class="col-6">			  
+			  <i class="fas fa-headphones headset_icon"></i>
+			</div>
+			<div class="col-6">			 
+			  <i class="fas fa-volume-up speaker_icon"></i>
+			</div>
+			<div class="col-12">
+				<h2>Graag deze test maar 1x maken, dit herhalen zal de resultaten kunnen beinvloeden.</h2>
+				<h3>LEES GOED! Zorg dat je gefocussed bent in een rustige omgeving, zodat je niet afgeleid bent. Zorg er ook voor dat je geluid aan staat en dat je dit goed kunt horen. Je moet aandachtig luisteren naar een VERHAAL en zo snel mogelijk  klikken op de plaatjes op de juiste volgorde!! dit doe je door "te klikken op je touchscreen" -- met telefoon of "Q,W,E of R te gebruiken" -- op je laptop. (Je kan fouten niet herstellen.) </h3>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-6  next_button">				
+				<i class="far fa-check-circle"></i>
+			</div>		
+		</div>
+	</div>
+	
+	<div class="container screen2">	
+		<audio id="playable_sound"  >		  
+			<source id='geluid' src="sounds/1.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		
+		<div class="row justify-content-center">
+			<div class="col-6  play_button">
+				<i class="fas fa-play play"></i>
+				<i class="fas fa-pause pause"></i>
+			</div>		
+		</div>		
+		<div class="row justify-content-center">
+			<div class="col-6 ">
+				<h3> <span id="tracktime">0 / 0</span></h3>
+				<h3> <span id='official_timer'> 0 </span> </h3>
+			</div>
+		</div>
+		
+		<div class="row antwoorden_knoppen">
+			<div class="col-3 ">
+				<div id="opt1" class="">
+					
+				</div>
+				<span>toets: Q*</span>
+			</div>
+			<div class="col-3 ">
+				<div id="opt2" class="">
+					
+				</div>
+				<span>toets: W*</span>
+			</div>
+			<div class="col-3 ">
+				<div id="opt3" class="">
+					
+				</div>
+				<span>toets: E*</span>
+			</div>
+			<div class="col-3 ">
+				<div id="opt4" class="">
+					
+				</div>
+				<span>toets: R*</span>
+			</div>
+		</div>
+		
+	</div>
+	<div class="container screen3">				
+		<div class="row">
+			<div class="col-12">Bedankt, dit was het onderzoek. </div>
+			<div class="col-12">In het onderstaande veld wil ik u vragen voor uw feedback. Om ons te helpen hierbij moet u denken aan; uw mening over het gebruik van de speaker of de koptelefoon bij deze test (verstaanbaarheid, duidelijkheid, verbeteringen), maar ook kunt u wat schrijven over het gebruik van dit programma met de telefoon of juist de computer.( gemakkelijkheid, duidelijkheid, gebruik van knoppen of touchscreen )</div>
+		</div>
+		<div class="row">			 
+				<textarea id="feedback" class="col-12"> </textarea>			
+		</div>
+		<div class="row">	
+			<div class="col-3 ">
+				<input id="upload_feedback" class="btn btn-primary" type="submit" value="klaar?" />
+			</div>
+		</div>
+	
+	</div>
+	
+
+    <!-- Optional JavaScript -->    
+
+	<<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+		<!-- Firebase App is always required and must be first -->
+	<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
+
+	<!-- Add additional services that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-messaging.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-functions.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyAdYzDkIAUFhyfqlNweuD8JWxP8FqdjlbM",
+		authDomain: "onderzoek-ipmedth.firebaseapp.com",
+		databaseURL: "https://onderzoek-ipmedth.firebaseio.com",
+		projectId: "onderzoek-ipmedth",
+		storageBucket: "onderzoek-ipmedth.appspot.com",
+		messagingSenderId: "593186375560"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+		
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
+ </body>
+</html>
