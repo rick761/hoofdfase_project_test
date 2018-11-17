@@ -42,6 +42,7 @@ $( document ).ready(function() {
 	var screen1 = $('.screen1')
 	var screen2 =$('.screen2')
 	var screen3 = $('.screen3')
+	var screen4 = $('.screen4')
 		//screen3	
 	var feedback_formulier = $("#feedback");
 	var feedback_send_button = $("#upload_feedback");
@@ -113,6 +114,7 @@ $( document ).ready(function() {
 			firebase.database().ref('/'+timestamp_sessie).set(
 			js_database);		
 			screen3.css('display','none');
+			screen4.css('display','inline');
 		}
 		//schrijf naar firebasedatab
 		

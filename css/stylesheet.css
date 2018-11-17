@@ -10,12 +10,12 @@ body{
 	display:inline;
 }
 .icon_select div{
-	margin: 3% 0;
+	margin: 1% 0;
 	text-align:center;
 	
 }
 .icon_select div i{
-	font-size:10em;
+	font-size:5em;
 }
 .icon_select div i:hover{
 	opacity:0.6;
@@ -111,6 +111,10 @@ body{
 }
 .screen3 .row{
 	margin: 3% 0;
+}
+
+.screen4{
+	display:none;
 }
 
 
