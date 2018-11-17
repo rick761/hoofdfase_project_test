@@ -61,7 +61,7 @@ body{
 .play_button:hover{
 	opacity:0.6;
 }
-.play_button .play{display:none;}
+.play_button .pause{display:none;}
 .antwoorden_knoppen div { padding:5%; }
 .antwoorden_knoppen div div{ 
 	 border: 1px solid black;

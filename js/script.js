@@ -275,8 +275,8 @@ $( document ).ready(function() {
 		track_currentTime = audio_element[0].currentTime;
 		track_finishTime = audio_element[0].duration;
 		if(track_currentTime > track_finishTime-0.5){
-			play_icon.css('display','none');
-			pause_icon.css('display','inline');
+			play_icon.css('display','inline');
+			pause_icon.css('display','none');
 			controleerOfLaatsteMogelijkheid();	
 		}		
 	}
@@ -289,8 +289,8 @@ $( document ).ready(function() {
 		if(track_currentTime != track_finishTime){ //als hij klaar is dan stopt hij
 			if(audio_element[0].paused){
 				audio_element.trigger("play");	
-				play_icon.css('display','inline');
-				pause_icon.css('display','none');				
+				play_icon.css('display','none');
+				pause_icon.css('display','inline');				
 			}			
 		}
 		//console.log(track_currentTime+" / " +track_finishTime);
